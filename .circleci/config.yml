@@ -7,5 +7,6 @@ jobs:
           CHROME_BIN: "/usr/bin/google-chrome"
     steps:
       - checkout
-      - run: npm install
+      #- run: npm install
+      - run: rm -rf node_modules && rm ./package-lock.json && npm install
       - run: npm test
